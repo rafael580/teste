@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,9 +26,9 @@ public class AdminController {
 	@Autowired
 	private AdminService repository;
 	
-	@RequestMapping(value = "/AdminLogin/{password}/{email}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public ResponseEntity<Admin> login(@PathVariable String password,String email) {
-		Admin obj = repository.login(password, email);
+	@GetMapping("/AdminLogin/{email}/{password}")
+	public ResponseEntity<Admin> login(@PathVariable String email, @PathVariable String password) {
+		Admin obj = repository.login(email, password);
 		return ResponseEntity.ok().body(obj);
 	}
 	

@@ -10,7 +10,7 @@ import hotelReserva.entity.Customer;
 
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Long> {
-	@Query(value = "SELECT * FROM tb_admin u where (u.email = :email AND u.password= :password)", nativeQuery = true)
+	@Query(value = "SELECT * FROM table_admin u where (u.email = :email AND u.password= :password)", nativeQuery = true)
 	public Admin findUserByUsernameAndPassword(@Param(value = "email") String email,
 			@Param(value = "password") String password);
 }

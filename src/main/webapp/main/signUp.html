@@ -17,7 +17,7 @@
         <p>Invalid Data<p>
       </div>
       
-      <form>
+      <form id="customerForm">
         <div class="inputArea">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" onkeydown="return /[a-z]/i.test(event.key)" />
@@ -53,8 +53,8 @@
           <label for="proofNumber">Password</label>
           <input type="password" name="password" id="password" minlength="8" onkeydown="return /[a-zA-Z0-9]+/i.test(event.key)">
         </div>
-        <button class="button" id="signUpButton" onclick="saveClient()">Signup</button>
-     </div>
+        <button type="submit" class="button" id="signUpButton">Signup</button>
+<!--         <button  class="button" id="signUpButton" onclick="enviar(event)">Signup</button> -->
    </form>
   </div>
 

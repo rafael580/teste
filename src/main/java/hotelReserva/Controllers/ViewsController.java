@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ViewsController {
 
 	
-	@RequestMapping("/")
+	@RequestMapping({"/", "index"})
 	public String index() {
 		return "index";
 	}
@@ -28,7 +28,12 @@ public class ViewsController {
 	public String AdminLogin() {
 		return "AdminLogin";
 	}
-
+	
+	@RequestMapping("/userLogin")
+	public String UserLogin() {
+		return "userLogin";
+	}
+	
 	@RequestMapping("/CustomerDetails")
 	public String CustomerDetails() {
 		return "CustomerDetails";
@@ -49,9 +54,4 @@ public class ViewsController {
 		return "PremierSuite";
 	}
 
-	@RequestMapping("/userLogin")
-	public String userLogin() {
-		return "userLogin";
-	}
-	
 }
