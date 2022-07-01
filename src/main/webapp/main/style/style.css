@@ -1,0 +1,24 @@
+#menu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  #menu button{
+      padding:15px; 
+      background-color: rgb(22, 72, 163);
+      color:white;
+      border-radius: 10px; 
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  #msg{
+      color:rgb(12, 51, 122);
+      display: block;
+      font-size:40px;
+  }

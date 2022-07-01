@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/signUp.css" rel="stylesheet" type="text/css" />
+    <title>Room Reservation - Admin Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logiArea">
+            <div>
+                <h1>Admin login</h1>
+                <div class="inputArea">
+                    <label for="userName">Username</label>
+                    <input type="text" name="userName" id="userName">
+                </div>
+                <div class="inputArea">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button class="button" id="adminLogin" onclick="loginRequest()">Login</button>
+                <div class="errorMessage" id="adminError">
+                    <p>Invalid Credentials
+                    <p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquerylib.js"></script>
+    <script type="text/javascript" src="js/adminLogin.js"></script>
+</body>
+</html>

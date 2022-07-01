@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style/signUp.css" rel="stylesheet" type="text/css" />
+  <title>Room Reservation - Sign Up</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logiArea">
+      <h1>Sign Up</h1>
+      <div class="errorMessage" id="signError">
+        <p>Invalid Data<p>
+      </div>
+      
+      <form>
+        <div class="inputArea">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" onkeydown="return /[a-z]/i.test(event.key)" />
+        </div>
+        <div class="inputArea">
+          <label for="email">Email Id</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="inputArea">
+          <label for="dob">Date of Birth</label>
+          <input type="text" name="dob" id="dob">
+        </div>
+        <div class="inputArea">
+          <label for="phNum">Phone Number</label>
+          <input type="number" name="phNum" id="phNum" maxlength="10">
+        </div>
+        <div class="inputArea">
+          <label for="proofType">Id Proof Type</label>
+          <select name="proofType" id="proofType">
+            <option value="" selected disabled></option>
+            <option value="panCard">PAN card</option>
+            <option value="voterId">Voter Id</option>
+            <option value="passport">Passport</option>
+            <option value="drivingLicense">Driving License</option>
+            <option value="aadharCard">Aadhar card</option>
+          </select>
+        </div>
+        <div class="inputArea">
+          <label for="proofValue">Id proof number</label>
+          <input type="text" name="proofValue" id="proofValue" minlength="6" onkeydown="return /[a-zA-Z0-9]+/i.test(event.key)" />
+        </div>
+        <div class="inputArea">
+          <label for="proofNumber">Password</label>
+          <input type="password" name="password" id="password" minlength="8" onkeydown="return /[a-zA-Z0-9]+/i.test(event.key)">
+        </div>
+        <button class="button" id="signUpButton" onclick="saveClient()">Signup</button>
+     </div>
+   </form>
+  </div>
+
+<script type="text/javascript" src="js/jquerylib.js"></script>
+<script type="text/javascript" src="js/signUp.js"></script>
+</body>
+
+</html>

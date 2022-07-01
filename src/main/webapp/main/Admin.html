@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/admin.css" rel="stylesheet" type="text/css" />
+    <title>Room Reservation - Booking Details</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="top">
+            <div class="title">
+                <h1>Booking Details</h1>
+            </div>
+            <nav class="menu">
+                <label for="" id="welcomeMsg">Welcome Admin</label>
+                <button id="logout">Logout</button>
+            </nav>
+        </header>
+
+        <section>
+            <div class="empty">
+                <label id="noRecordFound">No Records Found</label>
+            </div>
+
+            <div class="list">
+                <table>
+                    <thead>
+                        <th>Booking Id</th>
+                        <th>Customer Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Room Type</th>
+                        <th>Extra Beds</th>
+                        <th>Cost</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+
+                        <!-- 
+                            tr = table row = linha da tabela
+                            td = table d = coluna
+                         -->
+                        <!-- Daqui pra cima não mexe em nada -->
+                        <!-- Início ForEach -->
+                        <tr>
+                            <td><label id="bookingId1">2</label></td>
+                            <td><label id="customerName1">Sam</label></td>
+                            <td><label id="email1">sam@gmail.com</label></td>
+                            <td><label id="phoneNumber1">1234567890</label></td>
+                            <td><label id="fromDate1">16-06-2019</label></td>
+                            <td><label id="toDate1">17-06-2019</label></td>
+                            <td><label id="rooType1">Deluxe Non-AC</label></td>
+                            <td><label id="extraBeds1">0</label></td>
+                            <td><label id="cost1">2000</label></td>
+                            <td><button id="custDetails1">Customer Details</button></td>
+                        </tr>
+                        <!-- Fim ForEach -->
+                        <!-- 
+                            Lembrar que cada Id vai mudar no label
+                            bookingId1 -> pra o Id 1
+                            bookingId2 -> pra o Id 2
+                            etc...
+                        -->
+                        <!-- Daqui pra baixo não mexe -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+<script type="text/javascript" src="js/jquerylib.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+</body>
+
+</html>

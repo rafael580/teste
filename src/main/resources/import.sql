@@ -1,0 +1,1 @@
+INSERT INTO table_Admin (email,password) VALUES ( 'admin@mymail.com', 'admin1234');

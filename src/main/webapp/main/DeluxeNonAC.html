@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/customer.css" rel="stylesheet" type="text/css" />
+    <title>Room Reservation - Deluxe Non-AC</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="top">
+            <div class="title"><h3>Deluxe Non-AC</h3></div>
+            <nav class="userArea">
+                <label id="userWelcome">Welcome Sam</label>
+                <a href="index"> <button id="logout">Logout</button></a> 
+            </nav>
+        </header>
+
+        <main>
+            <aside>
+                <ul>
+                    <li><a href="DeluxeNonAC">Deluxe Non-AC</a></li>
+                    <li><a href="DeluxeAC">Deluxe AC</a></li>
+                    <li><a href="PremierSuite">Premier Suite</a></li>
+                </ul>
+            </aside>
+            
+            <section>
+                <form action="" method="">
+                    <div class="messages">
+                        <div class="successMessage">Booking Sucessful</div>
+                        <div class="errorMessage">Invalid Data</div>
+                    </div>
+
+                    <div class="inputArea">
+                        <label for="extraBeds">Number of Extra Beds</label>
+                        <input type="text" name="extraBeds" id="extraBeds" maxlength="1" value="0"
+                        onkeydown="return /[0-9]/i.test(event.key)">
+                    </div>
+                    <div class="inputArea">
+                        <label for="fromDate">From date</label>
+                        <input type="text" name="fromDate" id="fromDate" maxlength="10">
+                    </div>
+                    <div class="inputArea">
+                        <label for="toDate">To date</label>
+                        <input type="text" name="toDate" id="toDate" maxlength="10">
+                    </div>
+                    <div class="inputArea">
+                        <label for="">Amount to be paid</label>
+                        <label for="" id="amount"></label>
+                    </div>
+                    <button class="button" id="bookRoom">Book Room</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="js/jquerylib.js"></script>
+
+</body>
+</html>

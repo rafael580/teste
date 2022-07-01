@@ -1,0 +1,150 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.title  {
+  grid-column: 2;
+  color: lightskyblue;
+}
+
+.userArea {
+  grid-column: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #2a52be;
+}
+
+.userArea button {
+  background: #2a52be;
+  color: white;
+  padding: 8px;
+  font-size: 1rem;
+  border: transparent;
+  border-radius: 4px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  margin-top: 20px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 20px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+section {
+  border-top: 4px double black;
+  border-left: 4px double black;
+  height: 60vh;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr ;
+  justify-items: center;
+}
+
+.inputArea { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+input {
+  width: 100px;
+  line-height: 1.5;
+  border: 2px solid black;
+  border-radius: 4px
+}
+
+button {
+  border: transparent;
+  padding: 10px 10px;
+  width: 70px;
+  background: #2a52be;
+  color: white;
+  border-radius: 4px;
+}
+
+.messages {
+  margin: 20px auto;
+  height: 40px;
+  width: 80%;
+}
+
+.successMessage {
+  background: lightblue;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  color: darkblue;
+  display: none;
+}
+
+.errorMessage {
+  background: lightcoral;
+  color: darkred;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  display: none;
+}
+
+.customer-details {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.customer-details-content {
+  display: grid;
+  grid-column: 2;
+  justify-content: center;
+  align-content: center;
+}
+
+.customer-details-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.customer-details-item label:first-child {
+  text-align: right;
+}
+
+.customer-details-button {
+  display: flex;
+  
+}
