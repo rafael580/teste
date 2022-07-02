@@ -2,6 +2,7 @@ package hotelReserva.entity;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -30,7 +31,7 @@ public class Customer implements Serializable {
 	private String email;
 	private String password;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "GMT-3")
-	private Instant dateOFBirth;
+	private Date dateOFBirth;
 	private String phoneNumber;
 	
 	@Enumerated(EnumType.ORDINAL)
@@ -41,7 +42,7 @@ public class Customer implements Serializable {
 
 	}
 
-	public Customer(String name, String email, String password, Instant dateOFBirth, String phoneNumber,
+	public Customer(String name, String email, String password, Date dateOFBirth, String phoneNumber,
 			ProofTypeCustomer idProofType, String idProofNumer) {
 		super();
 		this.name = name;
@@ -81,11 +82,11 @@ public class Customer implements Serializable {
 		this.password = password;
 	}
 
-	public Instant getDateOFBirth() {
+	public Date getDateOFBirth() {
 		return dateOFBirth;
 	}
 
-	public void setDateOFBirth(Instant dateOFBirth) {
+	public void setDateOFBirth(Date dateOFBirth) {
 		this.dateOFBirth = dateOFBirth;
 	}
 

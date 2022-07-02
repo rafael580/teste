@@ -32,9 +32,9 @@ public class AdminService {
 	private AdminRepository adm;
 	
 	
-	public Admin login(String email,String password) {
+	public Admin login(String user,String pass) {
 		
-		Admin ad = adm.findUserByUsernameAndPassword(email, password);
+		Admin ad = adm.findUserByUsernameAndPassword(user, pass);
 		if(ad!=null) {
 			return ad;
 		}

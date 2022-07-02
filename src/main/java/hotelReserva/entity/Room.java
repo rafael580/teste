@@ -2,6 +2,7 @@ package hotelReserva.entity;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.CascadeType;
@@ -31,9 +32,9 @@ public class Room implements Serializable {
 	private Long id;
 	private Integer extraBeds;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "GMT-3")
-	private Instant fromDate;
+	private Date fromDate;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy",  timezone = "GMT-3")
-	private Instant toDate;
+	private Date toDate;
 	private double price;
 	
 	@Enumerated(EnumType.ORDINAL)
@@ -46,7 +47,7 @@ public class Room implements Serializable {
 	public Room() {
 	}
 
-	public Room(Integer extraBeds, Instant fromDate, Instant toDate, double price, TypeOfRoomQuarto  roomType, Customer customer) {
+	public Room(Integer extraBeds, Date fromDate, Date toDate, double price, TypeOfRoomQuarto  roomType, Customer customer) {
 		super();
 		this.extraBeds = extraBeds;
 		this.fromDate = fromDate;
@@ -68,19 +69,19 @@ public class Room implements Serializable {
 		this.extraBeds = extraBeds;
 	}
 
-	public Instant getFromDate() {
+	public Date getFromDate() {
 		return fromDate;
 	}
 
-	public void setFromDate(Instant fromDate) {
+	public void setFromDate(Date fromDate) {
 		this.fromDate = fromDate;
 	}
 
-	public Instant getToDate() {
+	public Date getToDate() {
 		return toDate;
 	}
 
-	public void setToDate(Instant toDate) {
+	public void setToDate(Date toDate) {
 		this.toDate = toDate;
 	}
 

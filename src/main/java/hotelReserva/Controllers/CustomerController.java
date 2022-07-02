@@ -37,12 +37,11 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/userLogin/{email}/{password}")
-	public ResponseEntity<Customer> login(@PathVariable String email, @PathVariable String password) {
-		Customer customer = repository.loginOnPage(email, password);
+	public ResponseEntity<CustomerDTO> login(@PathVariable String email, @PathVariable String password) {
+		CustomerDTO customer = repository.LoginOnPage(email, password);
 		return ResponseEntity.ok().body(customer);
 	}
 	
-
 	/*
 	 * Se tu estas usando a anotação @RestController, não precisa usar
 	 * @RequestMapping para get, pode ser somente @GetMapping

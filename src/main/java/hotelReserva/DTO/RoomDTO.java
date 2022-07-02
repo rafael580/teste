@@ -2,10 +2,13 @@ package hotelReserva.DTO;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import hotelReserva.entity.Customer;
 import hotelReserva.entity.Room;
@@ -20,8 +23,10 @@ public class RoomDTO implements Serializable {
 	private Long id;
 	
 	private Integer extraBeds;
-	private Instant fromDate;
-	private Instant toDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "GMT-3")
+	private Date fromDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "GMT-3")
+	private Date toDate;
 	private double price;
 	private TypeOfRoomQuarto roomType;
 	
@@ -30,7 +35,7 @@ public class RoomDTO implements Serializable {
 	public RoomDTO() {}
 	
 	public RoomDTO(Room r) {
-
+		this.id = r.getId();
 		this.extraBeds = r.getExtraBeds();
 		this.fromDate = r.getFromDate();
 		this.toDate = r.getToDate();
@@ -52,19 +57,19 @@ public class RoomDTO implements Serializable {
 		this.extraBeds = extraBeds;
 	}
 
-	public Instant getFromDate() {
+	public Date getFromDate() {
 		return fromDate;
 	}
 
-	public void setFromDate(Instant fromDate) {
+	public void setFromDate(Date fromDate) {
 		this.fromDate = fromDate;
 	}
 
-	public Instant getToDate() {
+	public Date getToDate() {
 		return toDate;
 	}
 
-	public void setToDate(Instant toDate) {
+	public void setToDate(Date toDate) {
 		this.toDate = toDate;
 	}
 

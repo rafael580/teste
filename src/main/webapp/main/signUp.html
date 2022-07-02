@@ -12,12 +12,12 @@
 <body>
   <div class="container">
     <div class="logiArea">
-      <h1>Sign Up</h1>
-      <div class="errorMessage" id="signError">
+			<h1>Sign Up</h1>
+			<div class="errorMessage" id="signError">
         <p>Invalid Data<p>
       </div>
       
-      <form id="customerForm">
+      <form>
         <div class="inputArea">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" onkeydown="return /[a-z]/i.test(event.key)" />
@@ -53,8 +53,8 @@
           <label for="proofNumber">Password</label>
           <input type="password" name="password" id="password" minlength="8" onkeydown="return /[a-zA-Z0-9]+/i.test(event.key)">
         </div>
-        <button type="submit" class="button" id="signUpButton">Signup</button>
-<!--         <button  class="button" id="signUpButton" onclick="enviar(event)">Signup</button> -->
+        <button class="button" id="signUpButton" onclick="saveClient()">Signup</button>
+     </div>
    </form>
   </div>
 

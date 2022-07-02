@@ -34,9 +34,9 @@ public class CustomerService {
 	}
 	
 	
-	public Customer loginOnPage(String email,String password) {
+	public CustomerDTO LoginOnPage(String email,String password) {
 		Customer customer = repository.findUserByUsernameAndPassword(email, password);
-		return customer;
+		return new CustomerDTO(customer);
 	}
 	
 	public CustomerDTO createCustomer(Customer c) {

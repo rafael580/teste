@@ -2,10 +2,13 @@ package hotelReserva.DTO;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import hotelReserva.entity.Customer;
 import hotelReserva.entity.enums.ProofTypeCustomer;
@@ -21,13 +24,14 @@ public class CustomerDTO implements Serializable {
 	private String name;
 	private String email;
 	private String password;
-	private Instant dateOFBirth;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "GMT-3")
+	private Date dateOFBirth;
 	private String phoneNumber;
 	private ProofTypeCustomer idProofType;
 	private String idProofNumer;
 
 	public CustomerDTO(Customer c) {
-		
+		this.id =c.getId();
 		this.name = c.getName();
 		this.email = c.getEmail();
 		this.password = c.getPassword();

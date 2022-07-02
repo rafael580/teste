@@ -1,5 +1,8 @@
 package hotelReserva.Config;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -12,6 +15,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @EnableWebMvc
@@ -35,13 +40,22 @@ public class MvcConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 		return resolver;
 	}
 
+	@Bean
+	public ObjectMapper objectMapper() {
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+//		dateFormat.setTimeZone(TimeZone.getTimeZone("America/Sao_Paulo"));
+		dateFormat.setTimeZone(TimeZone.getTimeZone("GMT-3"));
+		ObjectMapper dateFormatMapper = new ObjectMapper();
+		dateFormatMapper.setDateFormat(dateFormat);
+		return dateFormatMapper;
+	}
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/main/**").addResourceLocations("/main/");
 		registry.addResourceHandler("/js/**").addResourceLocations("/main/js/");
 		registry.addResourceHandler("/style/**").addResourceLocations("/main/style/");
-		
+
 	}
 
 }
