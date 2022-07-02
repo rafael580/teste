@@ -55,20 +55,20 @@ public class CustomerController {
 
 	@RequestMapping(value = "/criarRoomPremier", method = RequestMethod.POST, headers = "Accept=application/json")
 
-	public ResponseEntity<RoomDTO> createRoomPremierSuite(@RequestBody Room room) {
-		return null;
+	public ResponseEntity<RoomDTO> createRoomPremierSuite(@PathVariable Long id,@RequestBody Room room) {
+		return ResponseEntity.ok().body(repository.createRoomPrimierSuite(id, room));
 	}
 
 	@RequestMapping(value = "/criarDeluxeNonAC", method = RequestMethod.POST, headers = "Accept=application/json")
 
-	public ResponseEntity<RoomDTO> createDeluxeNonAC(@RequestBody Room room) {
-		return null;
+	public ResponseEntity<RoomDTO> createDeluxeNonAC(@PathVariable Long id,@RequestBody Room room) {
+		return ResponseEntity.ok().body(repository.createRoomDeluxeNonAC(id, room));
 	}
 
 	@RequestMapping(value = "/criarDeluxeAC", method = RequestMethod.POST, headers = "Accept=application/json")
 
-	public ResponseEntity<RoomDTO> createDeluxeAC(@RequestBody Room room) {
-		return null;
+	public ResponseEntity<RoomDTO> createDeluxeAC(@PathVariable Long id ,@RequestBody Room room) {
+		return ResponseEntity.ok().body(repository.createRoomDeluxe(id, room));
 	}
 
 }
